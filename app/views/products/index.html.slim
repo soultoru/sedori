@@ -1,0 +1,21 @@
+h2 Products search
+- if @products.count > 0
+  table.table.table-bordered.table-hover
+    thead
+      tr
+        th image
+        th title
+        th price
+    tbody
+      - @products.each do |product|
+        - attr = product['AttributeSets']['ItemAttributes']
+        - price = attr['ListPrice'] if attr
+        - title = attr['Title'] if attr
+        - img = attr['SmallImage']['URL'] if attr
+        tr
+          /td= attr
+          td= image_tag img if img.present?
+          td= title if title.present?
+          td= price['Amount'].to_i if price.present?
+- else
+  'no result

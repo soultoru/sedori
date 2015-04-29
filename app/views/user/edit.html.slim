@@ -1,0 +1,12 @@
+p= @user.name
+p= @user.email
+
+= simple_form_for @user, url: user_update_path, html: { class: 'form-horizontal' } do |f|
+  = f.input :mws_market_place_id
+  = f.input :mws_merchant_id
+  = f.input :mws_auth_token
+  .form-action
+    = f.button :submit, class: 'btn-primary', value: 'Commit'
+
+p=link_to 'MWS', 'https://developer.amazonservices.jp/'
+
