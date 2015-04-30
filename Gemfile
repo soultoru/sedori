@@ -35,7 +35,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'whenever'
 gem 'dalli'
-gem 'paranoid'
+gem 'paranoia'
 gem 'migrant'
 gem 'html5_validators'
 gem 'cancancan'
@@ -73,8 +73,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'pry-doc'
   gem 'pry-rails'
+  gem 'pry-doc'
   gem 'pry-byebug' 
   gem 'quiet_assets'
   gem 'factory_girl_rails'
